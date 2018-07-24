@@ -112,7 +112,7 @@ function generateQuestionBlock() {
 	const answerBlock =  
 	`
 	<div class="js-questions">
-	<h2>${STORE[i].question}</h3>
+	<h2>${STORE[i].question}</h2>
 	<form id="question-form">
 	 <fieldset name="answer">
       <legend>Choose An Answer</legend>
@@ -212,7 +212,7 @@ function checkAnswer() {
 	
 	const correctBlock = 
 	`<div class="answer-block">
-	<h4>Great job!</h4>
+	<h2>Great job!</h2>
 	<p>${STORE[i].quote}</p>
 	<img src="${STORE[i].image}" class="officeimg" alt="${STORE[i].alt}">
 	<button type="submit" id="button-nextquestion" class="hidden" value="Go">Next Question</button>
@@ -221,8 +221,8 @@ function checkAnswer() {
 
 	const incorrectBlock = `
 	<div class="answer-block">
-	<h4> Sorry, the correct answer was ${STORE[i].answer}
-		</h4>
+	<h2> Sorry, the correct answer was ${STORE[i].answer}
+		</h2>
 		<p>${STORE[i].quote}</p>
 	<img src="${STORE[i].image}" class="officeimg" alt="${STORE[i].alt}">
 	<button type="submit" id="button-nextquestion" class="hidden" value="Go">Next Question</button>
@@ -246,8 +246,8 @@ generateScore();
 function tallyScore() {
 	const finalScore = `
 	<div class="answer-block">
-	<h3>Here's Your Final Score:</h3>
-	<h4>${score} Correct, ${scoreI} Incorect</h4>
+	<h2>Here's Your Final Score:</h3>
+	<h3>${score} Correct, ${scoreI} Incorect</h4>
 	<div class="endimage"><img src='http://mrwgifs.com/wp-content/uploads/2013/12/Dwight-Schrute-Michael-Scott-Raise-The-Roof-On-The-Office.gif' class='officeimg' alt='michaelraisinghands'></div>
 	<button type="submit" id="button-restart" onclick="resetQuiz()" value="Go">Restart Quiz</button></div>`;
 	$('.js-final-box').append(finalScore);
